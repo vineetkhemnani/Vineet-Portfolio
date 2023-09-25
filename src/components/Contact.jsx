@@ -36,7 +36,7 @@ const Contact = () => {
         // import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         'service_xdw577p',
         // import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        'template_28ujgbp',
+        'template_llk404h',
         {
           from_name: form.name,
           to_name: 'Vineet Khemnani',
