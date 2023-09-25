@@ -6,14 +6,14 @@ import { technologies } from "../constants";
 
 const Tech = () => {
   return (
-    <div className='flex flex-row flex-wrap justify-center gap-10'>
+    <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-10">
       {technologies.map((technology) => (
-        <div className='w-20 h-20' key={technology.name}>
+        <div className="w-20 h-20" key={technology.name}>
           <BallCanvas icon={technology.icon} />
         </div>
       ))}
     </div>
-  );
+  )
 };
 
 export default SectionWrapper(Tech, "");
