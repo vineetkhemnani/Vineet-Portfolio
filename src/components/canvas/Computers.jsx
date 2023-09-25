@@ -1,24 +1,17 @@
-import React, { Suspense,useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
 import CanvasLoader from '../Loader'
 
 const VIEWPORT_WIDTH = 500 // Adjust to your desired viewport width
-const COMPUTER_SCALE_MOBILE = 0.5
+const MOBILE_MAX_WIDTH = 480 // Set the maximum width for mobile
+
 const COMPUTER_SCALE_DESKTOP = 0.75
-const COMPUTER_POSITION_MOBILE = [0, -3, -2.2]
 const COMPUTER_POSITION_DESKTOP = [0, -3.25, -1.5]
 
-const Computers = ({ isMobile }) => {
+const Computers = () => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
-
-  const computerScale = isMobile
-    ? COMPUTER_SCALE_MOBILE
-    : COMPUTER_SCALE_DESKTOP
-  const computerPosition = isMobile
-    ? COMPUTER_POSITION_MOBILE
-    : COMPUTER_POSITION_DESKTOP
 
   return (
     <mesh>
@@ -34,8 +27,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={computerScale}
-        position={computerPosition}
+        scale={COMPUTER_SCALE_DESKTOP}
+        position={COMPUTER_POSITION_DESKTOP}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -46,7 +39,7 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia(`(max-width: ${VIEWPORT_WIDTH}px)`)
+    const mediaQuery = window.matchMedia(`(max-width: ${MOBILE_MAX_WIDTH}px)`)
     setIsMobile(mediaQuery.matches)
 
     const handleMediaQueryChange = (event) => {
@@ -61,25 +54,27 @@ const ComputersCanvas = () => {
   }, [])
 
   return (
-    <Canvas
-      frameloop="demand"
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-      className="w-100"
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={!isMobile}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
+    <>
+      {!isMobile && (
+        <Canvas
+          frameloop="demand"
+          shadows
+          dpr={[1, 2]}
+          camera={{ position: [20, 3, 5], fov: 25 }}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+            <Computers />
+          </Suspense>
 
-      <Preload all />
-    </Canvas>
+          <Preload all />
+        </Canvas>
+      )}
+    </>
   )
 }
 
