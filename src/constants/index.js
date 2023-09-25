@@ -72,18 +72,10 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
   {
     name: "React JS",
     icon: reactjs,
   },
-  // {
-  //   name: "Redux Toolkit",
-  //   icon: redux,
-  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -91,6 +83,14 @@ const technologies = [
   {
     name: "Node JS",
     icon: nodejs,
+  },
+  // {
+  //   name: "TypeScript",
+  //   icon: typescript,
+  // },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
   },
   {
     name: "MongoDB",
@@ -100,10 +100,10 @@ const technologies = [
   //   name: "Three JS",
   //   icon: threejs,
   // },
-  // {
-  //   name: "git",
-  //   icon: git,
-  // },
+  {
+    name: "git",
+    icon: git,
+  },
   // {
   //   name: "figma",
   //   icon: figma,
