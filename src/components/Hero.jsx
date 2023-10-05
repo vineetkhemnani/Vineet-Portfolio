@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { styles } from '../styles'
+import { ComputersCanvas } from './canvas'
 
 const Hero = () => {
   return (
@@ -16,7 +16,12 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Vineet</span>
+            Hi, I'm{' '}
+            <span class="hero-container">
+              <h2 class="hero glitch layers" data-text="Vineet">
+                <span>Vineet</span>
+              </h2>
+            </span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I develop user interfaces
@@ -47,6 +52,6 @@ const Hero = () => {
       </div>
     </section>
   )
-};
+}
 
-export default Hero;
+export default Hero
