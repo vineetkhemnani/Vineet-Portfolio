@@ -15,13 +15,14 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  tnm,
+  unicorniz,
+  eatery,
+  // carrent,
+  game,
+  // jobit,
+  hackerrank,
+  // tripguide,
   threejs,
 } from "../assets";
 
@@ -46,7 +47,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
@@ -54,7 +55,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Software Engineer",
     icon: creator,
   },
 ];
@@ -129,45 +130,32 @@ const experiences = [
   //   ],
   // },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: 'Full Stack Developer',
+    company_name: 'Unicorniz Innovations',
+    icon: unicorniz,
+    iconBg: '#E6DEDD',
+    date: 'Sept 2023 - Oct 2022',
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      'Developing and maintaining web applications using React.js, Tailwind and other related technologies.',
+      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
+      'Implementing responsive design and ensuring cross-browser compatibility.',
+      'Participating in code reviews and providing constructive feedback to other developers.',
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: 'Web Developer',
+    company_name:
+      'TechSurge and Mridang by Maharaja Agrasen Institute of Technology',
+    icon: tnm,
+    iconBg: '#383E56',
+    date: 'Mar 2023 - Apr 2023',
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Led a team of four in planning, designing, developing, and launching the college's annual fest website using HTML, CSS, JavaScript and Joomla.",
+      'Developed and tested the fest website, creating 50+ customized event pages, increasing traffic by 40%.',
+      'Utilized APIs to create a visually appealing gallery showcasing 100+ HD images/videos, enhancing user engagement.',
     ],
   },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
+]
 
 const testimonials = [
   {
@@ -198,68 +186,69 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: 'The Eatery (food ordering app)',
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      'Developed a ReactJS-powered food ordering application that integrates with the Swiggy public API for real-time culinary information.',
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: 'react',
+        color: 'blue-text-gradient',
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: 'redux-toolkit',
+        color: 'green-text-gradient',
       },
       {
-        name: "tailwind",
-        color: "pink-text-gradient",
+        name: 'tailwind',
+        color: 'pink-text-gradient',
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: eatery,
+    source_code_link:
+      'https://github.com/vineetkhemnani/The-eatery-food-ordering',
   },
   {
-    name: "Job IT",
+    name: '2D SideScroller Game',
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      'Developed a game using the Canvas API with parallax backgrounds and responsive keyboard controls.Demonstrated state management skills by optimizing performance and gameplay mechanics.',
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: 'HTML',
+        color: 'blue-text-gradient',
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
+        name: 'CSS',
+        color: 'green-text-gradient',
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: 'JavaScript',
+        color: 'pink-text-gradient',
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: game,
+    source_code_link: 'https://github.com/vineetkhemnani/2D-SideScroller-Game',
   },
   {
-    name: "Trip Guide",
+    name: 'HackerRank Automation',
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      'Designed & implemented codebase for automating HackerRank login and question-solving using Puppeteer.',
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
+        name: 'JavaScript',
+        color: 'blue-text-gradient',
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
+        name: 'Automation',
+        color: 'green-text-gradient',
       },
       {
-        name: "css",
-        color: "pink-text-gradient",
+        name: 'Puppeteer',
+        color: 'pink-text-gradient',
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: hackerrank,
+    source_code_link: 'https://github.com/vineetkhemnani/HackerrankAutomated',
   },
-];
+]
 
 export { services, technologies, experiences, testimonials, projects };
