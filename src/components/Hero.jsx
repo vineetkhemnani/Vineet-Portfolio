@@ -9,17 +9,15 @@ const Hero = () => {
   const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
   useEffect(() => {
-    if (!vantaEffect) {
-      const minWidth = window.innerWidth > 768 ? 200.0 : 100.0
-      const minHeight = window.innerHeight > 768 ? 200.0 : 100.0
+    if (!vantaEffect && window.innerWidth > 768) {
       setVantaEffect(
         VANTANET({
           el: myRef.current,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          minHeight,
-          minWidth,
+          minHeight: 200.0,
+          minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
           color: 0x5d0cb9,
