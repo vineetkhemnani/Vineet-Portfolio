@@ -10,14 +10,16 @@ const Hero = () => {
   const myRef = useRef(null)
   useEffect(() => {
     if (!vantaEffect) {
+      const minWidth = window.innerWidth > 768 ? 200.0 : 100.0
+      const minHeight = window.innerHeight > 768 ? 200.0 : 100.0
       setVantaEffect(
         VANTANET({
           el: myRef.current,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
+          minHeight,
+          minWidth,
           scale: 1.0,
           scaleMobile: 1.0,
           color: 0x5d0cb9,
@@ -43,8 +45,8 @@ const Hero = () => {
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm{' '}
-              <span class="hero-container">
-                <h2 class="hero glitch layers" data-text="Vineet">
+              <span className="hero-container">
+                <h2 className="hero glitch layers" data-text="Vineet">
                   <span>Vineet</span>
                 </h2>
               </span>
