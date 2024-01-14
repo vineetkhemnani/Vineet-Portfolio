@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 
@@ -18,7 +18,7 @@ const ProjectCard = ({
   deployed_link,
 }) => {
   return (
-    <a href={deployed_link} target='_blank'>
+    <a href={deployed_link} target="_blank">
       <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
         <Tilt
           options={{
@@ -74,6 +74,7 @@ const ProjectCard = ({
 }
 
 const Works = () => {
+  
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -95,9 +96,14 @@ const Works = () => {
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+        {window.innerWidth > 768 &&
+          projects?.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
+        {window.innerWidth <= 1080 &&
+          projects.slice(0,3)?.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
       </div>
     </>
   )
