@@ -18,71 +18,73 @@ import {
   tnm,
   unicorniz,
   eatery,
+  dhaage,
+  taskscheduler,
   // carrent,
   game,
   // jobit,
   hackerrank,
   // tripguide,
   threejs,
-} from "../assets";
+} from '../assets'
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
+    id: 'about',
+    title: 'About',
   },
   {
-    id: "work",
-    title: "Work",
+    id: 'work',
+    title: 'Work',
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: 'contact',
+    title: 'Contact',
   },
-];
+]
 
 const services = [
   {
-    title: "Web Developer",
+    title: 'Web Developer',
     icon: web,
   },
   {
-    title: "React Developer",
+    title: 'React Developer',
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: 'Backend Developer',
     icon: backend,
   },
   {
-    title: "Software Engineer",
+    title: 'Software Engineer',
     icon: creator,
   },
-];
+]
 
 const technologies = [
   {
-    name: "HTML 5",
+    name: 'HTML 5',
     icon: html,
   },
   {
-    name: "CSS 3",
+    name: 'CSS 3',
     icon: css,
   },
   {
-    name: "JavaScript",
+    name: 'JavaScript',
     icon: javascript,
   },
   {
-    name: "React JS",
+    name: 'React JS',
     icon: reactjs,
   },
   {
-    name: "Tailwind CSS",
+    name: 'Tailwind CSS',
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: 'Node JS',
     icon: nodejs,
   },
   // {
@@ -90,11 +92,11 @@ const technologies = [
   //   icon: typescript,
   // },
   {
-    name: "Redux Toolkit",
+    name: 'Redux Toolkit',
     icon: redux,
   },
   {
-    name: "MongoDB",
+    name: 'MongoDB',
     icon: mongodb,
   },
   // {
@@ -102,7 +104,7 @@ const technologies = [
   //   icon: threejs,
   // },
   {
-    name: "git",
+    name: 'git',
     icon: git,
   },
   // {
@@ -113,7 +115,7 @@ const technologies = [
   //   name: "docker",
   //   icon: docker,
   // },
-];
+]
 
 const experiences = [
   // {
@@ -160,31 +162,52 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
+    name: 'Sara Lee',
+    designation: 'CFO',
+    company: 'Acme Co',
+    image: 'https://randomuser.me/api/portraits/women/4.jpg',
   },
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: 'Chris Brown',
+    designation: 'COO',
+    company: 'DEF Corp',
+    image: 'https://randomuser.me/api/portraits/men/5.jpg',
   },
   {
     testimonial:
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: 'Lisa Wang',
+    designation: 'CTO',
+    company: '456 Enterprises',
+    image: 'https://randomuser.me/api/portraits/women/6.jpg',
   },
-];
+]
 
 const projects = [
+  {
+    name: 'Dhaage',
+    description: `a cutting-edge, MERN stack-based application inspired by Instagram Threads,boasting image and thoughts sharing, and a user-friendly interface. Enhanced with Chakra UI’s elegant design components and jwt based authentication.`,
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'nodejs',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'mongodb',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: dhaage,
+    deployed_link: 'https://dhaage-eta.vercel.app/',
+    source_code_link: 'https://github.com/vineetkhemnani/Dhaage',
+  },
   {
     name: 'The Eatery (food ordering app)',
     description:
@@ -204,6 +227,7 @@ const projects = [
       },
     ],
     image: eatery,
+    deployed_link: 'https://the-eatery-food-ordering.vercel.app',
     source_code_link:
       'https://github.com/vineetkhemnani/The-eatery-food-ordering',
   },
@@ -226,6 +250,7 @@ const projects = [
       },
     ],
     image: game,
+    deployed_link: 'https://vineetkhemnani.github.io/2D-SideScroller-Game/',
     source_code_link: 'https://github.com/vineetkhemnani/2D-SideScroller-Game',
   },
   {
@@ -249,6 +274,28 @@ const projects = [
     image: hackerrank,
     source_code_link: 'https://github.com/vineetkhemnani/HackerrankAutomated',
   },
+  {
+    name: 'Task Scheduler',
+    description:
+      'Designed a task scheduler using React and Redux-toolkit for state management. Handling creation and deleting of dynamic lists with each containing individual todos',
+    tags: [
+      {
+        name: 'JavaScript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'React',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'Redux',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: taskscheduler,
+    deployed_link: 'https://taskscheduler-react-redux.netlify.app',
+    source_code_link: 'https://github.com/vineetkhemnani/ToDo-React-Redux',
+  },
 ]
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects }
