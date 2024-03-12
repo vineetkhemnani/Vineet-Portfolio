@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
 import React, { useState, useEffect, useRef } from 'react'
-import VANTANET from 'vanta/dist/vanta.net.min.js'
+// import VANTANET from 'vanta/dist/vanta.net.min.js'
+import BIRDS from 'vanta/dist/vanta.birds.min'
 
 const Hero = () => {
   const [vantaEffect, setVantaEffect] = useState(null)
@@ -11,7 +12,7 @@ const Hero = () => {
   useEffect(() => {
     if (!vantaEffect && window.innerWidth > 768) {
       setVantaEffect(
-        VANTANET({
+        BIRDS({
           el: myRef.current,
           mouseControls: true,
           touchControls: true,
@@ -20,8 +21,8 @@ const Hero = () => {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x5d0cb9,
-          backgroundColor: 0x80211,
+          color1: 0x3c00ff,
+          color2: 0x6900ff,
         })
       )
     }
