@@ -45,7 +45,7 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm{' '}
               <span className="hero-container">
-                <h2 className="hero glitch layers" data-text="Vineet">
+                <h2 className="hero" data-text="Vineet">
                   <span>Vineet</span>
                 </h2>
               </span>
