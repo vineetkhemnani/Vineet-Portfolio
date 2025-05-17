@@ -26,6 +26,7 @@ import {
   hackerrank,
   // tripguide,
   threejs,
+  intelliassist,
 } from '../assets'
 
 export const navLinks = [
@@ -87,10 +88,10 @@ const technologies = [
     name: 'Node JS',
     icon: nodejs,
   },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
   {
     name: 'Redux Toolkit',
     icon: redux,
@@ -111,26 +112,26 @@ const technologies = [
   //   name: "figma",
   //   icon: figma,
   // },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
+  {
+    name: "docker",
+    icon: docker,
+  },
 ]
 
 const experiences = [
-  // {
-  //   title: "React.js Developer",
-  //   company_name: "Starbucks",
-  //   icon: starbucks,
-  //   iconBg: "#383E56",
-  //   date: "March 2020 - April 2021",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
+  {
+    title: 'Software Engineer',
+    company_name: 'Intelliassist',
+    icon: intelliassist,
+    iconBg: '#E6DEDD',
+    date: 'Sept 2024 - Present',
+    points: [
+      'Migrated legacy APIs from Java Spring Boot to NestJS with Prisma ORM, improving maintainability.',
+      'Designed and implemented a scalable backend architecture, resulting in a 60% improvement in API response times. Developed custom triggers to ensure effective and automated database handling',
+      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
+      'Developed Shopify extensions that increased client store revenue by 30% and worked on Recommendations API tailored for diverse Shopify stores to enhance user engagement and sales..',
+    ],
+  },
   {
     title: 'Full Stack Developer',
     company_name: 'Unicorniz Innovations',
